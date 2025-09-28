@@ -1,0 +1,10 @@
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+import pandas as pd
+df = pd.read_csv("student_performance.csv", encoding="utf-8")
+df.shape, df.columns.tolist()
+df.head()
+df.info()
+df.describe(include="all").T
+import seaborn as sns
+import matplotlib.pyplot as plt
